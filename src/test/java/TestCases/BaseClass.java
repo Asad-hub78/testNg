@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -15,7 +16,18 @@ public class BaseClass {
 	@BeforeMethod(alwaysRun = true)
 
 	public void SetUpDriver() {
-		driver = new ChromeDriver();
+		String browser = System.getProperty("Browser");
+		if (browser.equalsIgnoreCase("fireFox")) {
+			
+			driver = new FirefoxDriver();
+		}else {
+			driver = new ChromeDriver();
+			
+			
+		}
+		
+			
+		
 		driver.get("https://www.simplilearn.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
