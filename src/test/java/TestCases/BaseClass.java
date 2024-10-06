@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeTest;
 public class BaseClass {
 	public static WebDriver driver;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 
 	public void SetUpDriver() {
 		driver = new ChromeDriver();
@@ -21,15 +21,15 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void TearDown() {
 		driver.close();
 	}
-	@BeforeTest
+	@BeforeTest (alwaysRun = true)
 	public void SetUpExcel() {
 		
 	}
-	@AfterTest
+	@AfterTest (alwaysRun= true)
 	public void CloseExcel() {
 		
 	} 

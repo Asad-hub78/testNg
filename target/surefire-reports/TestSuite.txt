@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 86.756 s <<< FAILURE! - in TestSuite
-TestCases.LoginTest.TC01_LoginFailureTest  Time elapsed: 5.58 s  <<< FAILURE!
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 18.945 s <<< FAILURE! - in TestSuite
+TestCases.LoginTest.TC01_LoginFailureTest  Time elapsed: 5.077 s  <<< FAILURE!
 junit.framework.ComparisonFailure: expected:<The email or password you have entered is invalid> but was:<Please enter a valid email address>
 	at TestCases.LoginTest.TC01_LoginFailureTest(LoginTest.java:22)
 

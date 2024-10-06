@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="sanity">
+  <test thread-count="1" name="Test">
+  
+  <parameter name = "param1" value = "abc@098.com"/>
+  <parameter name = "param2" value = "xyz@123"/>
+  <groups>
+  <run>
+  <include name = "sanity"/>
+  
+  </run>
+  </groups>
+    <classes>
+      <class name="TestCases.HomePageTest"/>
+      <class name="TestCases.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

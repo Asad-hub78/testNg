@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" verbose="0">
-  <test thread-count="5" name="Test(failed)" verbose="0">
+<suite name="Failed suite [sanity]">
+  <test thread-count="5" name="Test(failed)">
     <parameter name="param1" value="abc@098.com"/>
     <parameter name="param2" value="xyz@123"/>
+    <groups>
+      <run>
+        <include name="sanity"/>
+      </run>
+    </groups>
     <classes>
       <class name="TestCases.LoginTest">
         <methods>
@@ -16,4 +21,4 @@
       </class> <!-- TestCases.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+</suite> <!-- Failed suite [sanity] -->

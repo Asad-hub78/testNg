@@ -14,7 +14,7 @@ import Pages.LoginPage;
 
 @Listeners(Listener.class)
 public class LoginTest extends BaseClass {
-	@Test
+	@Test(groups= {"sanity"}, description="Login Failure")
 	public void TC01_LoginFailureTest() {
 		
 		LoginPage LP = new LoginPage();
@@ -22,7 +22,7 @@ public class LoginTest extends BaseClass {
 		LP.ValidateErrorMsg("The email or password you have entered is invalid");
 			
 	}
-	@Test
+	@Test(groups= {"sanity"}, description = "Login Success")
 public void TC02_LoginSuccessTest() {
 	LoginPage LP = new LoginPage();
 	LP.LoginFunction("abc@xyz", "ABC@1234");
