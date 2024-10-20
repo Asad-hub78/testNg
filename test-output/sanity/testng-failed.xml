@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [sanity]">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
     <parameter name="param1" value="abc@098.com"/>
     <parameter name="param2" value="xyz@123"/>
     <groups>
@@ -14,6 +14,7 @@
         <methods>
           <include name="SetUpExcel"/>
           <include name="CloseExcel"/>
+          <include name="TC02_LoginSuccessTest"/>
           <include name="TearDown"/>
           <include name="SetUpDriver"/>
           <include name="TC01_LoginFailureTest"/>

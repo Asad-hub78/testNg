@@ -10,7 +10,7 @@ import TestCases.BaseClass;
 import junit.framework.Assert;
 
 public class LoginPage {
-	WebDriver driver = BaseClass.driver;
+	WebDriver driver;
 	@FindBy(linkText = "Log in")
 	WebElement LoginLink;
 	@FindBy(name = "user_login")
@@ -25,7 +25,8 @@ public class LoginPage {
 	@FindBy(className = "error_msg")
 	WebElement Error;
 
-	public LoginPage() {
+	public LoginPage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 

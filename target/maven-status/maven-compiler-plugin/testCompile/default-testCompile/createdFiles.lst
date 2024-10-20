@@ -1,4 +1,5 @@
 TestCases\LoginTest.class
+grid\SeliniumGridExam.class
 Pages\LoginPage.class
 TestCases\BaseClass.class
 TestCases\HomePageTest.class

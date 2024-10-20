@@ -1,8 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 94.703 s <<< FAILURE! - in TestSuite
-TestCases.LoginTest.TC01_LoginFailureTest  Time elapsed: 11.581 s  <<< FAILURE!
-junit.framework.ComparisonFailure: expected:<The email or password you have entered is invalid> but was:<Please enter a valid email address>
-	at TestCases.LoginTest.TC01_LoginFailureTest(LoginTest.java:22)
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 54.208 s <<< FAILURE! - in TestSuite
+TestCases.LoginTest.TC01_LoginFailureTest  Time elapsed: 1.429 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"link text","selector":"Log in"}
+  (Session info: chrome=130.0.6723.58)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.22'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [543b15038beff98b481d206ff37812f4, findElement {using=link text, value=Log in}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.58 (3a50e012e4c9..., userDataDir: C:\Users\6666\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50995}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: Windows 10, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.112:4444/ses..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 543b15038beff98b481d206ff37812f4
+	at TestCases.LoginTest.TC01_LoginFailureTest(LoginTest.java:21)
 

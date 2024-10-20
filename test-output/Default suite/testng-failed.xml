@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.LoginTest">
+      <class name="grid.SeliniumGridExam">
         <methods>
-          <include name="TearDown"/>
-          <include name="SetUpDriver"/>
-          <include name="TC01_LoginFailureTest"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- TestCases.LoginTest -->
+      </class> <!-- grid.SeliniumGridExam -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

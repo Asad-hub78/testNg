@@ -17,20 +17,20 @@ public class LoginTest extends BaseClass {
 	@Test(groups= {"sanity"}, description="Login Failure")
 	public void TC01_LoginFailureTest() {
 		
-		LoginPage LP = new LoginPage();
+		LoginPage LP = new LoginPage(GetDriver());
 		LP.LoginFunction("abc@xyz", "ABC@1234");
 		LP.ValidateErrorMsg("The email or password you have entered is invalid");
 			
 	}
 	@Test(groups= {"sanity"}, description = "Login Success")
 public void TC02_LoginSuccessTest() {
-	LoginPage LP = new LoginPage();
+	LoginPage LP = new LoginPage(GetDriver());
 	LP.LoginFunction("abc@xyz", "ABC@1234");
 }
 	@Test
 	@Parameters({"param1","param2"})
 public void TC03_LoginSuccessTest(String Uname, String Pwd) {
-		LoginPage LP = new LoginPage();
+		LoginPage LP = new LoginPage(GetDriver());
 		LP.LoginFunction(Uname, Pwd);
 }
 Map<String, String> testdata = new HashMap<String, String>();
@@ -39,7 +39,7 @@ Map<String, String> testdata = new HashMap<String, String>();
 	@Test(dataProvider="dp")
 	public void TC04_LoginSuccessTest(String key) {
 		
-		LoginPage lp = new LoginPage();
+		LoginPage lp = new LoginPage(GetDriver());
 		lp.LoginFunction(key, testdata.get(key));
 		
 	}
