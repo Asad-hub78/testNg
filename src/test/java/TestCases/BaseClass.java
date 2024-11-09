@@ -1,13 +1,14 @@
 package TestCases;
 
 import java.io.IOException;
-
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -33,9 +34,17 @@ public class BaseClass {
 
 	@BeforeMethod(alwaysRun = true)
 
-	public void SetUpDriver() throws IOException {
+	public void SetUpDriver() throws MalformedURLException {
 		
 		String browser = System.getProperty("Browser");
+
+ChromeOptions options = new ChromeOptions();
+			options.addArguments("--no-sandbox"); 
+			options.addArguments("--disable-dev-shm-using") ;
+			options.addArguments("--window-size=1920,1080");
+			options.addArguments("--headless") ;
+options.addArguments("--ignore-ssl-errors=yes");
+options.addArguments("--ignore-certificate-errors");
 			
 			//String browser = "chrome";
 			
@@ -52,7 +61,7 @@ public class BaseClass {
 				
 			}
 			else {
-				driver = new ChromeDriver();
+				driver = new ChromeDriver(options);
 			}
 			SetDriver(driver);
 		
